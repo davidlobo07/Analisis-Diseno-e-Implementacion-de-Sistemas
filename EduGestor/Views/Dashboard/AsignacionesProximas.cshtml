@@ -1,0 +1,35 @@
+﻿@model IEnumerable<EduGestor.Models.ViewModels.AsignacionViewModel>
+
+    @{
+        ViewBag.Title = "Asignaciones Próximas";
+    }
+
+    <div class="container">
+        <h2>Asignaciones Próximas</h2>
+
+        @if (Model.Any())
+        {
+            foreach (var curso in Model.GroupBy(a => a.NombreCurso))
+            {
+                <h3>@curso.Key</h3> <!-- Nombre del curso -->
+                <div class="list-group" style="margin-bottom: 30px;">
+                    @foreach (var asignacion in curso)
+                    {
+                        <a href="@Url.Action("DetalleAsignacion", "Dashboard", new { id = asignacion.AsignacionID })" class="list-group-item list-group-item-action">
+                            <h5 class="mb-1" style="font-size: larger;">@asignacion.NombreAsignacion</h5>
+                            <small>Fecha de Entrega: <strong>@asignacion.FechaEntrega.ToString("dd/MM/yyyy")</strong></small>
+                        </a>
+                    }
+                </div>
+            }
+        }
+        else
+        {
+            <div class="alert alert-info" role="alert">
+                No hay asignaciones próximas.
+            </div>
+        }
+    </div>
+
+
+

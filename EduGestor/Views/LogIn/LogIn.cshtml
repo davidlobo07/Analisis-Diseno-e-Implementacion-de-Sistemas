@@ -1,0 +1,92 @@
+﻿@model EduGestor.Models.ViewModels.LogInViewModel
+
+@{
+    Layout = null; // Esto asegura que no se use el layout por defecto para esta vista
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión - EduGestor</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .bg {
+            position: relative;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+            .bg::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: url('/Content/Imagenes/imagen-background.jpg'); 
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                opacity: 0.7; /* Ajusta este valor para controlar el nivel de "fade" */
+                z-index: -1;
+            }
+
+        .logo-top-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 10px;
+            height: 50px;
+            width: auto;
+        }
+
+        /* Estilos para el formulario y otros ajustes */
+    </style>
+</head>
+<body class="bg">
+    <img src="~/Content/Imagenes/logo.png" alt="Logo Institución" class="logo-top-left" />
+
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="height:100vh;">
+            <div class="col-4">
+                <div class="card p-4">
+                    @using (Html.BeginForm("Login", "LogIn", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="form-group">
+                            <label for="Correo">Usuario</label>
+                            @Html.TextBoxFor(m => m.Correo, new { @class = "form-control", placeholder = "Correo electrónico" })
+                            @Html.ValidationMessageFor(m => m.Correo)
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Contrasena">Contraseña</label>
+                            @Html.PasswordFor(m => m.Contrasena, new { @class = "form-control", placeholder = "Contraseña" })
+                            @Html.ValidationMessageFor(m => m.Contrasena)
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Incluir tus scripts de JavaScript aquí -->
+</body>
+</html>
+
+
+

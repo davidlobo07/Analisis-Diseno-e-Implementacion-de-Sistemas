@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c6443eb301024a9986066bb65b38d8b6" Name="Diagram1">
+        <EntityTypeShape EntityType="EduGestorModel.PerfilUsuario" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EduGestorModel.Role" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EduGestorModel.Usuario" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="EduGestorModel.FK__PerfilUsu__Usuar__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="EduGestorModel.FK__Usuarios__RolID__3A81B327" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="EduGestorModel.Asignacione" Width="1.5" PointX="8.625" PointY="3.625" />
+        <EntityTypeShape EntityType="EduGestorModel.Curso" Width="1.5" PointX="0.75" PointY="6.625" />
+        <EntityTypeShape EntityType="EduGestorModel.Grupos" Width="1.5" PointX="5.625" PointY="4.875" />
+        <AssociationConnector Association="EduGestorModel.FK__Asignacio__Curso__47DBAE45" />
+        <AssociationConnector Association="EduGestorModel.FK__Asignacio__Usuar__48CFD27E" />
+        <AssociationConnector Association="EduGestorModel.FK__Grupos__CursoID__4BAC3F29" />
+        <AssociationConnector Association="EduGestorModel.EstudiantesGrupos" />
+        <EntityTypeShape EntityType="EduGestorModel.ProfesoresCurso" Width="1.5" PointX="8.25" PointY="6.875" />
+        <AssociationConnector Association="EduGestorModel.fk_curso" />
+        <AssociationConnector Association="EduGestorModel.fk_usuario" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,21 @@
+﻿@model EduGestor.Models.ViewModels.AsignacionViewModel
+
+@{
+    ViewBag.Title = "Detalle de Asignación";
+}
+
+<div class="container">
+    <h2>Detalle de Asignación</h2>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">@Model.NombreCurso</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Fecha de Entrega: @Model.FechaEntrega.ToString("dd/MM/yyyy")</h6>
+            <p class="card-text">Descripcion: @Model.Descripcion</p>
+
+            <!-- Puedes agregar aquí más detalles según lo necesites -->
+        </div>
+    </div>
+
+    <a href="@Url.Action("AsignacionesProximas", "Dashboard")" class="btn btn-primary mt-3">Volver a Asignaciones Próximas</a>
+</div>
