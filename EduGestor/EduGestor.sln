@@ -5,8 +5,6 @@ VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduGestor", "EduGestor.csproj", "{B61B34C0-BEB8-4643-AAFE-86867396E95B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduGestor.Tests", "..\EduGestor.Tests\EduGestor.Tests.csproj", "{A0C3235D-1616-4702-9998-A0D573222379}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{B61B34C0-BEB8-4643-AAFE-86867396E95B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B61B34C0-BEB8-4643-AAFE-86867396E95B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B61B34C0-BEB8-4643-AAFE-86867396E95B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A0C3235D-1616-4702-9998-A0D573222379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A0C3235D-1616-4702-9998-A0D573222379}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A0C3235D-1616-4702-9998-A0D573222379}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A0C3235D-1616-4702-9998-A0D573222379}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
