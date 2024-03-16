@@ -23,9 +23,11 @@ namespace EduGestor.Models
         public int GrupoID { get; set; }
         public string NombreGrupo { get; set; }
         public int CursoID { get; set; }
+        public int UsuarioID { get; set; }
     
         public virtual Curso Curso { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Usuario> Usuarios { get; set; }
+        public virtual Usuario Usuario { get; set; }
     }
 }

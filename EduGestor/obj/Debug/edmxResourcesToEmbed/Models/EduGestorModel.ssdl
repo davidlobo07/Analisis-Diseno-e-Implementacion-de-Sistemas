@@ -34,6 +34,7 @@
     <Property Name="GrupoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NombreGrupo" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="CursoID" Type="int" Nullable="false" />
+    <Property Name="UsuarioID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PerfilUsuario">
     <Key>
@@ -168,6 +169,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Grupos_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="Grupos" Type="Self.Grupos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="UsuarioID" />
+      </Principal>
+      <Dependent Role="Grupos">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="fk_usuario">
     <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
     <End Role="ProfesoresCursos" Type="Self.ProfesoresCursos" Multiplicity="*" />
@@ -220,6 +233,10 @@
     <AssociationSet Name="fk_curso" Association="Self.fk_curso">
       <End Role="Cursos" EntitySet="Cursos" />
       <End Role="ProfesoresCursos" EntitySet="ProfesoresCursos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Grupos_Usuarios" Association="Self.FK_Grupos_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Grupos" EntitySet="Grupos" />
     </AssociationSet>
     <AssociationSet Name="fk_usuario" Association="Self.fk_usuario">
       <End Role="Usuarios" EntitySet="Usuarios" />

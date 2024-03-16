@@ -17,10 +17,11 @@ namespace EduGestor.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Usuario()
         {
-            this.PerfilUsuarios = new HashSet<PerfilUsuario>();
             this.Asignaciones = new HashSet<Asignacione>();
-            this.Grupos = new HashSet<Grupos>();
+            this.PerfilUsuarios = new HashSet<PerfilUsuario>();
             this.ProfesoresCursos = new HashSet<ProfesoresCurso>();
+            this.Grupos = new HashSet<Grupos>();
+            this.Grupos1 = new HashSet<Grupos>();
         }
     
         public int UsuarioID { get; set; }
@@ -31,13 +32,15 @@ namespace EduGestor.Models
         public Nullable<int> RolID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PerfilUsuario> PerfilUsuarios { get; set; }
-        public virtual Role Role { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Asignacione> Asignaciones { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PerfilUsuario> PerfilUsuarios { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProfesoresCurso> ProfesoresCursos { get; set; }
+        public virtual Role Role { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Grupos> Grupos { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProfesoresCurso> ProfesoresCursos { get; set; }
+        public virtual ICollection<Grupos> Grupos1 { get; set; }
     }
 }

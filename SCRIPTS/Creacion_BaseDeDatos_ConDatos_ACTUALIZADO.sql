@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [EduGestor]    Script Date: 3/9/2024 11:46:27 PM ******/
+/****** Object:  Database [EduGestor]    Script Date: 3/15/2024 6:58:12 PM ******/
 CREATE DATABASE [EduGestor]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -84,7 +84,7 @@ ALTER DATABASE [EduGestor] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP
 GO
 USE [EduGestor]
 GO
-/****** Object:  Table [dbo].[Asignaciones]    Script Date: 3/9/2024 11:46:28 PM ******/
+/****** Object:  Table [dbo].[Asignaciones]    Script Date: 3/15/2024 6:58:13 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -102,7 +102,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Cursos]    Script Date: 3/9/2024 11:46:28 PM ******/
+/****** Object:  Table [dbo].[Cursos]    Script Date: 3/15/2024 6:58:13 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -117,7 +117,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[EstudiantesGrupos]    Script Date: 3/9/2024 11:46:28 PM ******/
+/****** Object:  Table [dbo].[EstudiantesGrupos]    Script Date: 3/15/2024 6:58:13 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -132,7 +132,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Grupos]    Script Date: 3/9/2024 11:46:28 PM ******/
+/****** Object:  Table [dbo].[Grupos]    Script Date: 3/15/2024 6:58:13 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -141,13 +141,14 @@ CREATE TABLE [dbo].[Grupos](
 	[GrupoID] [int] IDENTITY(1,1) NOT NULL,
 	[NombreGrupo] [varchar](100) NOT NULL,
 	[CursoID] [int] NOT NULL,
+	[UsuarioID] [int] NOT NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[GrupoID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PerfilUsuario]    Script Date: 3/9/2024 11:46:28 PM ******/
+/****** Object:  Table [dbo].[PerfilUsuario]    Script Date: 3/15/2024 6:58:13 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -165,7 +166,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ProfesoresCursos]    Script Date: 3/9/2024 11:46:28 PM ******/
+/****** Object:  Table [dbo].[ProfesoresCursos]    Script Date: 3/15/2024 6:58:13 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -180,7 +181,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Roles]    Script Date: 3/9/2024 11:46:28 PM ******/
+/****** Object:  Table [dbo].[Roles]    Script Date: 3/15/2024 6:58:13 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -194,7 +195,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuarios]    Script Date: 3/9/2024 11:46:28 PM ******/
+/****** Object:  Table [dbo].[Usuarios]    Script Date: 3/15/2024 6:58:13 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -214,15 +215,15 @@ CREATE TABLE [dbo].[Usuarios](
 GO
 SET IDENTITY_INSERT [dbo].[Asignaciones] ON 
 GO
-INSERT [dbo].[Asignaciones] ([AsignacionID], [CursoID], [UsuarioID], [Descripcion], [FechaEntrega], [NombreAsignacion]) VALUES (1, 1, 4, N'Usar html para hace un forms', CAST(N'2024-03-01' AS Date), N'INTRO AL HTML')
+INSERT [dbo].[Asignaciones] ([AsignacionID], [CursoID], [UsuarioID], [Descripcion], [FechaEntrega], [NombreAsignacion]) VALUES (1, 1, 4, N'Usar html para hace un forms', CAST(N'2024-05-06' AS Date), N'INTRO AL HTML')
 GO
-INSERT [dbo].[Asignaciones] ([AsignacionID], [CursoID], [UsuarioID], [Descripcion], [FechaEntrega], [NombreAsignacion]) VALUES (2, 2, 13, N'Hacer un join', CAST(N'2024-03-02' AS Date), N'USO DE JOINS')
+INSERT [dbo].[Asignaciones] ([AsignacionID], [CursoID], [UsuarioID], [Descripcion], [FechaEntrega], [NombreAsignacion]) VALUES (2, 2, 13, N'Hacer un join', CAST(N'2024-06-05' AS Date), N'USO DE JOINS')
 GO
-INSERT [dbo].[Asignaciones] ([AsignacionID], [CursoID], [UsuarioID], [Descripcion], [FechaEntrega], [NombreAsignacion]) VALUES (3, 1, 4, N'Investigacion sobre Javascript', CAST(N'2024-03-04' AS Date), N'INVESTIGACION 1')
+INSERT [dbo].[Asignaciones] ([AsignacionID], [CursoID], [UsuarioID], [Descripcion], [FechaEntrega], [NombreAsignacion]) VALUES (3, 1, 4, N'Investigacion sobre Javascript', CAST(N'2024-05-05' AS Date), N'INVESTIGACION 1')
 GO
-INSERT [dbo].[Asignaciones] ([AsignacionID], [CursoID], [UsuarioID], [Descripcion], [FechaEntrega], [NombreAsignacion]) VALUES (4, 2, 13, N'Hacer una base de datos para un almacen de armas', CAST(N'2024-04-03' AS Date), N'BD PARA BODEGA')
+INSERT [dbo].[Asignaciones] ([AsignacionID], [CursoID], [UsuarioID], [Descripcion], [FechaEntrega], [NombreAsignacion]) VALUES (4, 2, 13, N'Hacer una base de datos para un almacen de armas', CAST(N'2024-05-06' AS Date), N'BD PARA BODEGA')
 GO
-INSERT [dbo].[Asignaciones] ([AsignacionID], [CursoID], [UsuarioID], [Descripcion], [FechaEntrega], [NombreAsignacion]) VALUES (5, 2, 4, N'Usar bootstrap en su proyecto', CAST(N'2024-04-04' AS Date), N'INTRO A BOOTSTRAP')
+INSERT [dbo].[Asignaciones] ([AsignacionID], [CursoID], [UsuarioID], [Descripcion], [FechaEntrega], [NombreAsignacion]) VALUES (5, 2, 4, N'Usar bootstrap en su proyecto', CAST(N'2024-05-07' AS Date), N'INTRO A BOOTSTRAP')
 GO
 SET IDENTITY_INSERT [dbo].[Asignaciones] OFF
 GO
@@ -230,7 +231,15 @@ SET IDENTITY_INSERT [dbo].[Cursos] ON
 GO
 INSERT [dbo].[Cursos] ([CursoID], [NombreCurso], [Descripcion]) VALUES (1, N'Desarrollo de Aplicaciones Web', N'Curso Para desarrollar paginas web.')
 GO
-INSERT [dbo].[Cursos] ([CursoID], [NombreCurso], [Descripcion]) VALUES (2, N'Base de Datos', NULL)
+INSERT [dbo].[Cursos] ([CursoID], [NombreCurso], [Descripcion]) VALUES (2, N'Base de Datos', N'Curso para aprender a usar Bases de datos')
+GO
+INSERT [dbo].[Cursos] ([CursoID], [NombreCurso], [Descripcion]) VALUES (3, N'Ingles 1', N'Curso introductorio de ingles')
+GO
+INSERT [dbo].[Cursos] ([CursoID], [NombreCurso], [Descripcion]) VALUES (4, N'Ingles 2', N'Curso introductorio de ingles (segundo nivel)')
+GO
+INSERT [dbo].[Cursos] ([CursoID], [NombreCurso], [Descripcion]) VALUES (5, N'Ingles 3', N'Curso intermedio de ingles')
+GO
+INSERT [dbo].[Cursos] ([CursoID], [NombreCurso], [Descripcion]) VALUES (6, N'Ingles 4', N'Curso avanzado de ingles (ultimo nivel)')
 GO
 SET IDENTITY_INSERT [dbo].[Cursos] OFF
 GO
@@ -239,6 +248,14 @@ GO
 INSERT [dbo].[ProfesoresCursos] ([ProfesorCursoID], [UsuarioID], [CursoID]) VALUES (1, 12, 1)
 GO
 INSERT [dbo].[ProfesoresCursos] ([ProfesorCursoID], [UsuarioID], [CursoID]) VALUES (2, 17, 2)
+GO
+INSERT [dbo].[ProfesoresCursos] ([ProfesorCursoID], [UsuarioID], [CursoID]) VALUES (3, 12, 3)
+GO
+INSERT [dbo].[ProfesoresCursos] ([ProfesorCursoID], [UsuarioID], [CursoID]) VALUES (4, 17, 4)
+GO
+INSERT [dbo].[ProfesoresCursos] ([ProfesorCursoID], [UsuarioID], [CursoID]) VALUES (5, 12, 5)
+GO
+INSERT [dbo].[ProfesoresCursos] ([ProfesorCursoID], [UsuarioID], [CursoID]) VALUES (6, 17, 6)
 GO
 SET IDENTITY_INSERT [dbo].[ProfesoresCursos] OFF
 GO
@@ -262,11 +279,11 @@ INSERT [dbo].[Usuarios] ([UsuarioID], [Correo], [Contrasena], [PrimerNombre], [A
 GO
 INSERT [dbo].[Usuarios] ([UsuarioID], [Correo], [Contrasena], [PrimerNombre], [Apellido], [RolID]) VALUES (15, N'mrodriguez@ulacit.es', N'12345678', N'Marvin', N'Rodriguez', 1)
 GO
-INSERT [dbo].[Usuarios] ([UsuarioID], [Correo], [Contrasena], [PrimerNombre], [Apellido], [RolID]) VALUES (17, N'mfernandez@ulacit.pr', N'12345678', N'Mario', N'Fernandez', 2)
+INSERT [dbo].[Usuarios] ([UsuarioID], [Correo], [Contrasena], [PrimerNombre], [Apellido], [RolID]) VALUES (17, N'mlobo@ulacit.pr', N'12345678', N'Mario', N'Fernandez', 2)
 GO
 SET IDENTITY_INSERT [dbo].[Usuarios] OFF
 GO
-/****** Object:  Index [UQ__PerfilUs__2B3DE799D866D2A8]    Script Date: 3/9/2024 11:46:28 PM ******/
+/****** Object:  Index [UQ__PerfilUs__2B3DE799D866D2A8]    Script Date: 3/15/2024 6:58:13 PM ******/
 ALTER TABLE [dbo].[PerfilUsuario] ADD UNIQUE NONCLUSTERED 
 (
 	[UsuarioID] ASC
@@ -274,7 +291,7 @@ ALTER TABLE [dbo].[PerfilUsuario] ADD UNIQUE NONCLUSTERED
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [UQ__Usuarios__60695A191980CEFE]    Script Date: 3/9/2024 11:46:28 PM ******/
+/****** Object:  Index [UQ__Usuarios__60695A191980CEFE]    Script Date: 3/15/2024 6:58:13 PM ******/
 ALTER TABLE [dbo].[Usuarios] ADD  CONSTRAINT [UQ__Usuarios__60695A191980CEFE] UNIQUE NONCLUSTERED 
 (
 	[Correo] ASC
@@ -294,6 +311,11 @@ REFERENCES [dbo].[Grupos] ([GrupoID])
 GO
 ALTER TABLE [dbo].[Grupos]  WITH CHECK ADD FOREIGN KEY([CursoID])
 REFERENCES [dbo].[Cursos] ([CursoID])
+GO
+ALTER TABLE [dbo].[Grupos]  WITH CHECK ADD  CONSTRAINT [FK_Grupos_Usuarios] FOREIGN KEY([UsuarioID])
+REFERENCES [dbo].[Usuarios] ([UsuarioID])
+GO
+ALTER TABLE [dbo].[Grupos] CHECK CONSTRAINT [FK_Grupos_Usuarios]
 GO
 ALTER TABLE [dbo].[PerfilUsuario]  WITH CHECK ADD  CONSTRAINT [FK__PerfilUsu__Usuar__3E52440B] FOREIGN KEY([UsuarioID])
 REFERENCES [dbo].[Usuarios] ([UsuarioID])

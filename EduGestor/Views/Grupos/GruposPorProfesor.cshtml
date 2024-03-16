@@ -1,0 +1,55 @@
+﻿@model EduGestor.Models.ViewModels.CursoGrupoViewModel
+
+@{
+    ViewBag.Title = "Mis Cursos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Html.Encode(Model.NombreProfesor) - Cursos</h2>
+
+<style>
+    .curso-link {
+        display: block;
+        padding: 10px;
+        background-color: #ffffff; /* Fondo blanco */
+        font-weight: bold;
+        text-transform: uppercase; /* Mayúsculas */
+        border: 2px solid; /* Borde definido pero sin color aquí */
+        border-radius: 5px; /* Bordes redondeados */
+        text-decoration: none; /* Remover subrayado */
+        margin-bottom: 15px; /* Separación entre elementos */
+        color: inherit; /* El color se hereda del estilo en línea */
+    }
+</style>
+
+@if (Model.Cursos != null && Model.Cursos.Count > 0)
+{
+    <div class="list-group">
+        @foreach (var curso in Model.Cursos.OrderBy(c => c.NombreCurso))
+        {
+            <a href="@Url.Action("GestionGrupos", "Cursos", new { cursoId = curso.CursoID })" class="curso-link" style="">
+                @Html.Encode(curso.NombreCurso)
+            </a>
+        }
+    </div>
+}
+else
+{
+    <p>No se encontraron cursos para mostrar.</p>
+}
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const colores = ['#3498db', '#e74c3c', '#2ecc71', '#f1c40f', '#9b59b6', '#1abc9c', '#34495e'];
+        const cursoLinks = document.querySelectorAll('.curso-link');
+
+        cursoLinks.forEach((link, index) => {
+            const color = colores[index % colores.length]; // Ciclo a través de colores
+            link.style.borderColor = color;
+            link.style.color = color;
+        });
+    });
+</script>
+
+
+

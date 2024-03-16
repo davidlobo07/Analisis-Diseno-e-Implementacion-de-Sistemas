@@ -1,5 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="EduGestorModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Asignacione">
+    <Key>
+      <PropertyRef Name="AsignacionID" />
+    </Key>
+    <Property Name="AsignacionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CursoID" Type="Int32" Nullable="false" />
+    <Property Name="UsuarioID" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="FechaEntrega" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NombreAsignacion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Curso" Relationship="Self.FK__Asignacio__Curso__47DBAE45" FromRole="Asignaciones" ToRole="Cursos" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK__Asignacio__Usuar__48CFD27E" FromRole="Asignaciones" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="Curso">
+    <Key>
+      <PropertyRef Name="CursoID" />
+    </Key>
+    <Property Name="CursoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreCurso" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Asignaciones" Relationship="Self.FK__Asignacio__Curso__47DBAE45" FromRole="Cursos" ToRole="Asignaciones" />
+    <NavigationProperty Name="Grupos" Relationship="Self.FK__Grupos__CursoID__4BAC3F29" FromRole="Cursos" ToRole="Grupos" />
+    <NavigationProperty Name="ProfesoresCursos" Relationship="Self.fk_curso" FromRole="Cursos" ToRole="ProfesoresCursos" />
+  </EntityType>
+  <EntityType Name="Grupos">
+    <Key>
+      <PropertyRef Name="GrupoID" />
+    </Key>
+    <Property Name="GrupoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreGrupo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CursoID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Curso" Relationship="Self.FK__Grupos__CursoID__4BAC3F29" FromRole="Grupos" ToRole="Cursos" />
+    <NavigationProperty Name="Usuarios" Relationship="Self.EstudiantesGrupos" FromRole="Grupos" ToRole="Usuarios" />
+    <Property Name="UsuarioID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="EduGestorModel.FK_Grupos_Usuarios" FromRole="Grupos" ToRole="Usuario" />
+  </EntityType>
   <EntityType Name="PerfilUsuario">
     <Key>
       <PropertyRef Name="PerfilUsuarioID" />
@@ -11,6 +47,16 @@
     <Property Name="Carrera" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="FechaIngreso" Type="DateTime" Precision="0" />
     <NavigationProperty Name="Usuario" Relationship="Self.FK__PerfilUsu__Usuar__3E52440B" FromRole="PerfilUsuario" ToRole="Usuarios" />
+  </EntityType>
+  <EntityType Name="ProfesoresCurso">
+    <Key>
+      <PropertyRef Name="ProfesorCursoID" />
+    </Key>
+    <Property Name="ProfesorCursoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UsuarioID" Type="Int32" Nullable="false" />
+    <Property Name="CursoID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Curso" Relationship="Self.fk_curso" FromRole="ProfesoresCursos" ToRole="Cursos" />
+    <NavigationProperty Name="Usuario" Relationship="Self.fk_usuario" FromRole="ProfesoresCursos" ToRole="Usuarios" />
   </EntityType>
   <EntityType Name="Role">
     <Key>
@@ -30,12 +76,61 @@
     <Property Name="PrimerNombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="RolID" Type="Int32" />
+    <NavigationProperty Name="Asignaciones" Relationship="Self.FK__Asignacio__Usuar__48CFD27E" FromRole="Usuarios" ToRole="Asignaciones" />
     <NavigationProperty Name="PerfilUsuarios" Relationship="Self.FK__PerfilUsu__Usuar__3E52440B" FromRole="Usuarios" ToRole="PerfilUsuario" />
+    <NavigationProperty Name="ProfesoresCursos" Relationship="Self.fk_usuario" FromRole="Usuarios" ToRole="ProfesoresCursos" />
     <NavigationProperty Name="Role" Relationship="Self.FK__Usuarios__RolID__3A81B327" FromRole="Usuarios" ToRole="Roles" />
-    <NavigationProperty Name="Asignaciones" Relationship="EduGestorModel.FK__Asignacio__Usuar__48CFD27E" FromRole="Usuario" ToRole="Asignacione" />
-    <NavigationProperty Name="Grupos" Relationship="EduGestorModel.EstudiantesGrupos" FromRole="Usuario" ToRole="Grupos" />
-    <NavigationProperty Name="ProfesoresCursos" Relationship="EduGestorModel.fk_usuario" FromRole="Usuario" ToRole="ProfesoresCurso" />
+    <NavigationProperty Name="Grupos" Relationship="Self.EstudiantesGrupos" FromRole="Usuarios" ToRole="Grupos" />
+    <NavigationProperty Name="Grupos1" Relationship="EduGestorModel.FK_Grupos_Usuarios" FromRole="Usuario" ToRole="Grupos" />
   </EntityType>
+  <Association Name="FK__Asignacio__Curso__47DBAE45">
+    <End Role="Cursos" Type="Self.Curso" Multiplicity="1" />
+    <End Role="Asignaciones" Type="Self.Asignacione" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cursos">
+        <PropertyRef Name="CursoID" />
+      </Principal>
+      <Dependent Role="Asignaciones">
+        <PropertyRef Name="CursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Asignacio__Usuar__48CFD27E">
+    <End Role="Usuarios" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Asignaciones" Type="Self.Asignacione" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="UsuarioID" />
+      </Principal>
+      <Dependent Role="Asignaciones">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Grupos__CursoID__4BAC3F29">
+    <End Role="Cursos" Type="Self.Curso" Multiplicity="1" />
+    <End Role="Grupos" Type="Self.Grupos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cursos">
+        <PropertyRef Name="CursoID" />
+      </Principal>
+      <Dependent Role="Grupos">
+        <PropertyRef Name="CursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_curso">
+    <End Role="Cursos" Type="Self.Curso" Multiplicity="1" />
+    <End Role="ProfesoresCursos" Type="Self.ProfesoresCurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cursos">
+        <PropertyRef Name="CursoID" />
+      </Principal>
+      <Dependent Role="ProfesoresCursos">
+        <PropertyRef Name="CursoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK__PerfilUsu__Usuar__3E52440B">
     <End Role="Usuarios" Type="Self.Usuario" Multiplicity="0..1" />
     <End Role="PerfilUsuario" Type="Self.PerfilUsuario" Multiplicity="*" />
@@ -44,6 +139,18 @@
         <PropertyRef Name="UsuarioID" />
       </Principal>
       <Dependent Role="PerfilUsuario">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_usuario">
+    <End Role="Usuarios" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="ProfesoresCursos" Type="Self.ProfesoresCurso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="UsuarioID" />
+      </Principal>
+      <Dependent Role="ProfesoresCursos">
         <PropertyRef Name="UsuarioID" />
       </Dependent>
     </ReferentialConstraint>
@@ -60,151 +167,63 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="EstudiantesGrupos">
+    <End Role="Usuarios" Type="Self.Usuario" Multiplicity="*" />
+    <End Role="Grupos" Type="Self.Grupos" Multiplicity="*" />
+  </Association>
   <EntityContainer Name="EduGestorEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Asignaciones" EntityType="Self.Asignacione" />
+    <EntitySet Name="Cursos" EntityType="Self.Curso" />
+    <EntitySet Name="Grupos" EntityType="Self.Grupos" />
     <EntitySet Name="PerfilUsuarios" EntityType="Self.PerfilUsuario" />
+    <EntitySet Name="ProfesoresCursos" EntityType="Self.ProfesoresCurso" />
     <EntitySet Name="Roles" EntityType="Self.Role" />
     <EntitySet Name="Usuarios" EntityType="Self.Usuario" />
+    <AssociationSet Name="FK__Asignacio__Curso__47DBAE45" Association="Self.FK__Asignacio__Curso__47DBAE45">
+      <End Role="Cursos" EntitySet="Cursos" />
+      <End Role="Asignaciones" EntitySet="Asignaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Asignacio__Usuar__48CFD27E" Association="Self.FK__Asignacio__Usuar__48CFD27E">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Asignaciones" EntitySet="Asignaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Grupos__CursoID__4BAC3F29" Association="Self.FK__Grupos__CursoID__4BAC3F29">
+      <End Role="Cursos" EntitySet="Cursos" />
+      <End Role="Grupos" EntitySet="Grupos" />
+    </AssociationSet>
+    <AssociationSet Name="fk_curso" Association="Self.fk_curso">
+      <End Role="Cursos" EntitySet="Cursos" />
+      <End Role="ProfesoresCursos" EntitySet="ProfesoresCursos" />
+    </AssociationSet>
     <AssociationSet Name="FK__PerfilUsu__Usuar__3E52440B" Association="Self.FK__PerfilUsu__Usuar__3E52440B">
       <End Role="Usuarios" EntitySet="Usuarios" />
       <End Role="PerfilUsuario" EntitySet="PerfilUsuarios" />
+    </AssociationSet>
+    <AssociationSet Name="fk_usuario" Association="Self.fk_usuario">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="ProfesoresCursos" EntitySet="ProfesoresCursos" />
     </AssociationSet>
     <AssociationSet Name="FK__Usuarios__RolID__3A81B327" Association="Self.FK__Usuarios__RolID__3A81B327">
       <End Role="Roles" EntitySet="Roles" />
       <End Role="Usuarios" EntitySet="Usuarios" />
     </AssociationSet>
-    <EntitySet Name="Asignaciones" EntityType="EduGestorModel.Asignacione" />
-    <EntitySet Name="Cursos" EntityType="EduGestorModel.Curso" />
-    <EntitySet Name="Grupos" EntityType="EduGestorModel.Grupos" />
-    <AssociationSet Name="FK__Asignacio__Curso__47DBAE45" Association="EduGestorModel.FK__Asignacio__Curso__47DBAE45">
-      <End Role="Curso" EntitySet="Cursos" />
-      <End Role="Asignacione" EntitySet="Asignaciones" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Asignacio__Usuar__48CFD27E" Association="EduGestorModel.FK__Asignacio__Usuar__48CFD27E">
-      <End Role="Usuario" EntitySet="Usuarios" />
-      <End Role="Asignacione" EntitySet="Asignaciones" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Grupos__CursoID__4BAC3F29" Association="EduGestorModel.FK__Grupos__CursoID__4BAC3F29">
-      <End Role="Curso" EntitySet="Cursos" />
+    <AssociationSet Name="EstudiantesGrupos" Association="Self.EstudiantesGrupos">
+      <End Role="Usuarios" EntitySet="Usuarios" />
       <End Role="Grupos" EntitySet="Grupos" />
     </AssociationSet>
-    <AssociationSet Name="EstudiantesGrupos" Association="EduGestorModel.EstudiantesGrupos">
+    <AssociationSet Name="FK_Grupos_Usuarios" Association="EduGestorModel.FK_Grupos_Usuarios">
       <End Role="Usuario" EntitySet="Usuarios" />
       <End Role="Grupos" EntitySet="Grupos" />
-    </AssociationSet>
-    <EntitySet Name="ProfesoresCursos" EntityType="EduGestorModel.ProfesoresCurso" />
-    <AssociationSet Name="fk_curso" Association="EduGestorModel.fk_curso">
-      <End Role="Curso" EntitySet="Cursos" />
-      <End Role="ProfesoresCurso" EntitySet="ProfesoresCursos" />
-    </AssociationSet>
-    <AssociationSet Name="fk_usuario" Association="EduGestorModel.fk_usuario">
-      <End Role="Usuario" EntitySet="Usuarios" />
-      <End Role="ProfesoresCurso" EntitySet="ProfesoresCursos" />
     </AssociationSet>
   </EntityContainer>
-  <EntityType Name="Asignacione">
-    <Key>
-      <PropertyRef Name="AsignacionID" />
-    </Key>
-    <Property Name="AsignacionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="CursoID" Type="Int32" Nullable="false" />
-    <Property Name="UsuarioID" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Name="FechaEntrega" Type="DateTime" Nullable="false" Precision="0" />
-    <NavigationProperty Name="Curso" Relationship="EduGestorModel.FK__Asignacio__Curso__47DBAE45" FromRole="Asignacione" ToRole="Curso" />
-    <NavigationProperty Name="Usuario" Relationship="EduGestorModel.FK__Asignacio__Usuar__48CFD27E" FromRole="Asignacione" ToRole="Usuario" />
-    <Property Name="NombreAsignacion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-  </EntityType>
-  <EntityType Name="Curso">
-    <Key>
-      <PropertyRef Name="CursoID" />
-    </Key>
-    <Property Name="CursoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="NombreCurso" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Asignaciones" Relationship="EduGestorModel.FK__Asignacio__Curso__47DBAE45" FromRole="Curso" ToRole="Asignacione" />
-    <NavigationProperty Name="Grupos" Relationship="EduGestorModel.FK__Grupos__CursoID__4BAC3F29" FromRole="Curso" ToRole="Grupos" />
-    <NavigationProperty Name="ProfesoresCursos" Relationship="EduGestorModel.fk_curso" FromRole="Curso" ToRole="ProfesoresCurso" />
-  </EntityType>
-  <EntityType Name="Grupos">
-    <Key>
-      <PropertyRef Name="GrupoID" />
-    </Key>
-    <Property Name="GrupoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="NombreGrupo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="CursoID" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Curso" Relationship="EduGestorModel.FK__Grupos__CursoID__4BAC3F29" FromRole="Grupos" ToRole="Curso" />
-    <NavigationProperty Name="Usuarios" Relationship="EduGestorModel.EstudiantesGrupos" FromRole="Grupos" ToRole="Usuario" />
-  </EntityType>
-  <Association Name="FK__Asignacio__Curso__47DBAE45">
-    <End Type="EduGestorModel.Curso" Role="Curso" Multiplicity="1" />
-    <End Type="EduGestorModel.Asignacione" Role="Asignacione" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Curso">
-        <PropertyRef Name="CursoID" />
-      </Principal>
-      <Dependent Role="Asignacione">
-        <PropertyRef Name="CursoID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Asignacio__Usuar__48CFD27E">
+  <Association Name="FK_Grupos_Usuarios">
     <End Type="EduGestorModel.Usuario" Role="Usuario" Multiplicity="1" />
-    <End Type="EduGestorModel.Asignacione" Role="Asignacione" Multiplicity="*" />
+    <End Type="EduGestorModel.Grupos" Role="Grupos" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Usuario">
         <PropertyRef Name="UsuarioID" />
-      </Principal>
-      <Dependent Role="Asignacione">
-        <PropertyRef Name="UsuarioID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Grupos__CursoID__4BAC3F29">
-    <End Type="EduGestorModel.Curso" Role="Curso" Multiplicity="1" />
-    <End Type="EduGestorModel.Grupos" Role="Grupos" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Curso">
-        <PropertyRef Name="CursoID" />
       </Principal>
       <Dependent Role="Grupos">
-        <PropertyRef Name="CursoID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="EstudiantesGrupos">
-    <End Type="EduGestorModel.Usuario" Role="Usuario" Multiplicity="*" />
-    <End Type="EduGestorModel.Grupos" Role="Grupos" Multiplicity="*" />
-  </Association>
-  <EntityType Name="ProfesoresCurso">
-    <Key>
-      <PropertyRef Name="ProfesorCursoID" />
-    </Key>
-    <Property Name="ProfesorCursoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="UsuarioID" Type="Int32" Nullable="false" />
-    <Property Name="CursoID" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Curso" Relationship="EduGestorModel.fk_curso" FromRole="ProfesoresCurso" ToRole="Curso" />
-    <NavigationProperty Name="Usuario" Relationship="EduGestorModel.fk_usuario" FromRole="ProfesoresCurso" ToRole="Usuario" />
-  </EntityType>
-  <Association Name="fk_curso">
-    <End Type="EduGestorModel.Curso" Role="Curso" Multiplicity="1" />
-    <End Type="EduGestorModel.ProfesoresCurso" Role="ProfesoresCurso" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Curso">
-        <PropertyRef Name="CursoID" />
-      </Principal>
-      <Dependent Role="ProfesoresCurso">
-        <PropertyRef Name="CursoID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="fk_usuario">
-    <End Type="EduGestorModel.Usuario" Role="Usuario" Multiplicity="1" />
-    <End Type="EduGestorModel.ProfesoresCurso" Role="ProfesoresCurso" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="UsuarioID" />
-      </Principal>
-      <Dependent Role="ProfesoresCurso">
         <PropertyRef Name="UsuarioID" />
       </Dependent>
     </ReferentialConstraint>

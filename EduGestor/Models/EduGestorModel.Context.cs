@@ -25,12 +25,12 @@ namespace EduGestor.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<PerfilUsuario> PerfilUsuarios { get; set; }
-        public virtual DbSet<Role> Roles { get; set; }
-        public virtual DbSet<Usuario> Usuarios { get; set; }
         public virtual DbSet<Asignacione> Asignaciones { get; set; }
         public virtual DbSet<Curso> Cursos { get; set; }
         public virtual DbSet<Grupos> Grupos { get; set; }
+        public virtual DbSet<PerfilUsuario> PerfilUsuarios { get; set; }
         public virtual DbSet<ProfesoresCurso> ProfesoresCursos { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<Usuario> Usuarios { get; set; }
     }
 }

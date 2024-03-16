@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Proyecto EduGestor\EduGestor\Models\EduGestorModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\danie\OneDrive\Documentos\GitHub\Analisis-Diseno-e-Implementacion-de-Sistemas\EduGestor\Models\EduGestorModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

@@ -129,6 +129,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CuentaController.cs" />
+    <Compile Include="Controllers\CursosController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LogInController.cs" />
@@ -173,6 +174,7 @@
     </Compile>
     <Compile Include="Models\ViewModels\AsignacionViewModel.cs" />
     <Compile Include="Models\ViewModels\CuentaViewModel.cs" />
+    <Compile Include="Models\ViewModels\CursoGrupoViewModel.cs" />
     <Compile Include="Models\ViewModels\CursoViewModel.cs" />
     <Compile Include="Models\ViewModels\DashboardViewModel.cs" />
     <Compile Include="Models\ViewModels\GrupoViewModel.cs" />
@@ -204,8 +206,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Models\EduGestorModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>EduGestorModel.Context.cs</LastGenOutput>
       <DependentUpon>EduGestorModel.edmx</DependentUpon>
+      <LastGenOutput>EduGestorModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\EduGestorModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -253,6 +255,7 @@
     <Content Include="Views\LogIn\LogIn.cshtml" />
     <Content Include="Views\Dashboard\AsignacionesProximas.cshtml" />
     <Content Include="Views\Dashboard\DetalleAsignacion.cshtml" />
+    <Content Include="Views\Grupos\GruposPorProfesor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

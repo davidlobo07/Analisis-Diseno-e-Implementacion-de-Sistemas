@@ -51,7 +51,8 @@
             @Html.ActionLink("Cuenta", "Index", "Cuenta", new { area = "" }, new { @class = "nav-link" })
             @Html.ActionLink("Dashboard", "AsignacionesProximas", "Dashboard", new { area = "" }, new { @class = "nav-link" + (currentController == "Dashboard" && currentAction == "AsignacionesProximas" ? " active-link" : "") })
             @Html.ActionLink("Cursos", "Index", "Cursos", new { area = "" }, new { @class = "nav-link" })
-            @Html.ActionLink("Grupos", "Index", "Grupos", new { area = "" }, new { @class = "nav-link" })
+            @Html.ActionLink("Grupos", "GruposPorProfesor", "Cursos", new { area = "" }, new { @class = "nav-link" + (currentController == "Cursos" && currentAction == "GruposPorProfesor" ? " active-link" : "") })
+
             <!-- Añadir más botones según sea necesario -->
         </div>
     }
