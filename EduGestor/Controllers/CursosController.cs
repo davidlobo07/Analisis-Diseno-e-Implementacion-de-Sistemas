@@ -50,5 +50,22 @@ public class CursosController : Controller
             return RedirectToAction("Login", "LogIn");
         }
     }
+
+    public ActionResult GestionGrupos(int cursoId)
+    {
+        // Aquí asumimos que ya tienes una lógica para recuperar los grupos del curso seleccionado.
+        var grupos = db.Grupos
+            .Where(g => g.CursoID == cursoId)
+            .Select(g => new GrupoEstudianteViewModel
+            {
+                GrupoID = g.GrupoID,
+                NombreGrupo = "Grupo " + g.GrupoID, // Ajusta según cómo quieras formatear el nombre del grupo
+                                                    // Aquí deberías cargar los estudiantes de cada grupo, si es necesario para la vista.
+            })
+            .ToList();
+
+        return View("~/Views/Grupos/VistaGrupos.cshtml", grupos);
+    }
+
 }
 

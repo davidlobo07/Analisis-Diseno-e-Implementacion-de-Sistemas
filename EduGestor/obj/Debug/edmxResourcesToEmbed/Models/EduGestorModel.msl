@@ -22,13 +22,22 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="EstudiantesGrupos">
+      <EntityTypeMapping TypeName="EduGestorModel.EstudiantesGrupos">
+        <MappingFragment StoreEntitySet="EstudiantesGrupos">
+          <ScalarProperty Name="EstudianteID" ColumnName="EstudianteID" />
+          <ScalarProperty Name="GrupoID" ColumnName="GrupoID" />
+          <ScalarProperty Name="IdentificadorUnico" ColumnName="IdentificadorUnico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Grupos">
       <EntityTypeMapping TypeName="EduGestorModel.Grupos">
         <MappingFragment StoreEntitySet="Grupos">
-          <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
           <ScalarProperty Name="GrupoID" ColumnName="GrupoID" />
           <ScalarProperty Name="NombreGrupo" ColumnName="NombreGrupo" />
           <ScalarProperty Name="CursoID" ColumnName="CursoID" />
+          <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -73,13 +82,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="EstudiantesGrupos" TypeName="EduGestorModel.EstudiantesGrupos" StoreEntitySet="EstudiantesGrupos">
-      <EndProperty Name="Usuarios">
-        <ScalarProperty Name="UsuarioID" ColumnName="EstudianteID" />
-      </EndProperty>
-      <EndProperty Name="Grupos">
-        <ScalarProperty Name="GrupoID" ColumnName="GrupoID" />
-      </EndProperty>
-    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

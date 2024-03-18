@@ -17,17 +17,17 @@ namespace EduGestor.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Grupos()
         {
-            this.Usuarios = new HashSet<Usuario>();
+            this.EstudiantesGrupos = new HashSet<EstudiantesGrupos>();
         }
     
         public int GrupoID { get; set; }
         public string NombreGrupo { get; set; }
         public int CursoID { get; set; }
-        public int UsuarioID { get; set; }
+        public Nullable<int> UsuarioID { get; set; }
     
         public virtual Curso Curso { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Usuario> Usuarios { get; set; }
+        public virtual ICollection<EstudiantesGrupos> EstudiantesGrupos { get; set; }
         public virtual Usuario Usuario { get; set; }
     }
 }

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<EduGestor.Models.ViewModels.GrupoEstudianteViewModel>
+
+@{
+    ViewBag.Title = "Lista de Grupos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista de Grupos</h2>
+
+@if (Model.Any())
+{
+    int contadorGrupo = 1; // Inicia el contador para el nombre del grupo
+    <ul class="list-group">
+        @foreach (var grupo in Model)
+        {
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between align-items-center">
+                    <!-- Usa el contador para mostrar el nombre del grupo -->
+                    <div class="grupo-nombre" style="cursor:pointer;">
+                        @($"Grupo {contadorGrupo++}")
+                    </div>
+                    @Html.ActionLink("Editar grupo", "EditarGrupo", new { id = grupo.GrupoID }, new { @class = "btn btn-primary" })
+                </div>
+                <div class="grupo-estudiantes mt-2" style="display:none;">
+                    @if (grupo.Estudiantes.Any())
+                    {
+                        <ul>
+                            @foreach (var estudiante in grupo.Estudiantes)
+                            {
+                                <li>@estudiante.NombreEstudiante</li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <p>No hay estudiantes en este grupo.</p>
+                    }
+                </div>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No se encontraron grupos para mostrar.</p>
+}
+
+<script>
+    $(document).ready(function () {
+        $(".grupo-nombre").click(function (e) {
+            $(this).next(".grupo-estudiantes").slideToggle("slow");
+        });
+    });
+</script>
+

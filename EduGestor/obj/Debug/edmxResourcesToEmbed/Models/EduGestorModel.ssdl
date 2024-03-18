@@ -26,6 +26,7 @@
     </Key>
     <Property Name="EstudianteID" Type="int" Nullable="false" />
     <Property Name="GrupoID" Type="int" Nullable="false" />
+    <Property Name="IdentificadorUnico" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="Grupos">
     <Key>
@@ -34,7 +35,7 @@
     <Property Name="GrupoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NombreGrupo" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="CursoID" Type="int" Nullable="false" />
-    <Property Name="UsuarioID" Type="int" Nullable="false" />
+    <Property Name="UsuarioID" Type="int" />
   </EntityType>
   <EntityType Name="PerfilUsuario">
     <Key>
@@ -170,7 +171,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Grupos_Usuarios">
-    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
     <End Role="Grupos" Type="Self.Grupos" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Usuarios">

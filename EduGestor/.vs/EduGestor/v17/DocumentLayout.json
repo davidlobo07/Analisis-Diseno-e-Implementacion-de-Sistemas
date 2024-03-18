@@ -3,36 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|c:\\users\\danie\\onedrive\\documentos\\github\\analisis-diseno-e-implementacion-de-sistemas\\edugestor\\views\\grupos\\gruposporprofesor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:views\\grupos\\gruposporprofesor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\views\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:views\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|c:\\users\\danie\\onedrive\\documentos\\github\\analisis-diseno-e-implementacion-de-sistemas\\edugestor\\controllers\\cursoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:controllers\\cursoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\models\\edugestormodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|c:\\users\\danie\\onedrive\\documentos\\github\\analisis-diseno-e-implementacion-de-sistemas\\edugestor\\models\\edugestormodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
       "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:models\\edugestormodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|c:\\users\\danie\\onedrive\\documentos\\github\\analisis-diseno-e-implementacion-de-sistemas\\edugestor\\models\\viewmodels\\cursogrupoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:models\\viewmodels\\cursogrupoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\views\\grupos\\vistagrupos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:views\\grupos\\vistagrupos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|c:\\users\\danie\\onedrive\\documentos\\github\\analisis-diseno-e-implementacion-de-sistemas\\edugestor\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|c:\\users\\danie\\onedrive\\documentos\\github\\analisis-diseno-e-implementacion-de-sistemas\\edugestor\\controllers\\gruposcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:controllers\\gruposcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\models\\viewmodels\\grupoestudianteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:models\\viewmodels\\grupoestudianteviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\controllers\\cursoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:controllers\\cursoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\controllers\\cuentacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:controllers\\cuentacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|c:\\users\\danie\\onedrive\\documentos\\github\\analisis-diseno-e-implementacion-de-sistemas\\edugestor\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\views\\grupos\\gruposporprofesor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:views\\grupos\\gruposporprofesor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\models\\viewmodels\\cursogrupoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:models\\viewmodels\\cursogrupoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\models\\viewmodels\\cuentaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:models\\viewmodels\\cuentaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\models\\viewmodels\\asignacionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:models\\viewmodels\\asignacionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\models\\viewmodels\\grupoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,20 +71,8 @@
       "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:models\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\models\\viewmodels\\cuentaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:models\\viewmodels\\cuentaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\views\\dashboard\\asignacionesproximas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:views\\dashboard\\asignacionesproximas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\models\\viewmodels\\asignacionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:models\\viewmodels\\asignacionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B61B34C0-BEB8-4643-AAFE-86867396E95B}|EduGestor.csproj|C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\models\\viewmodels\\usuarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -118,7 +134,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -130,27 +146,131 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\packages.config",
+              "RelativeDocumentMoniker": "packages.config",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\packages.config",
+              "RelativeToolTip": "packages.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-03-18T05:48:45.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "GruposController.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Controllers\\GruposController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GruposController.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Controllers\\GruposController.cs",
+              "RelativeToolTip": "Controllers\\GruposController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-17T05:48:57.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEoAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-02-26T00:12:47.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACIAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-22T03:07:35.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Controllers\\DashboardController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T00:10:37.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VistaGrupos.cshtml",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Views\\Grupos\\VistaGrupos.cshtml",
+              "RelativeDocumentMoniker": "Views\\Grupos\\VistaGrupos.cshtml",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Views\\Grupos\\VistaGrupos.cshtml",
+              "RelativeToolTip": "Views\\Grupos\\VistaGrupos.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-17T23:27:20.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GrupoEstudianteViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Models\\ViewModels\\GrupoEstudianteViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\GrupoEstudianteViewModel.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Models\\ViewModels\\GrupoEstudianteViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\GrupoEstudianteViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-17T05:35:52.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LogIn.cshtml",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Views\\LogIn\\LogIn.cshtml",
+              "RelativeDocumentMoniker": "Views\\LogIn\\LogIn.cshtml",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Views\\LogIn\\LogIn.cshtml",
+              "RelativeToolTip": "Views\\LogIn\\LogIn.cshtml",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAABUAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-22T02:27:01.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "EduGestorModel.edmx [Diagram1]",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Models\\EduGestorModel.edmx",
               "RelativeDocumentMoniker": "Models\\EduGestorModel.edmx",
               "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Models\\EduGestorModel.edmx [Diagram1]",
               "RelativeToolTip": "Models\\EduGestorModel.edmx [Diagram1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2024-03-11T18:45:17.676Z",
+              "WhenOpened": "2024-03-18T06:05:59.169Z",
               "EditorCaption": " [Diagram1]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAIwCIAAABQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-02-22T03:07:35.561Z",
+              "DocumentIndex": 6,
+              "Title": "CursosController.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Controllers\\CursosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CursosController.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Controllers\\CursosController.cs",
+              "RelativeToolTip": "Controllers\\CursosController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-13T17:25:02.27Z",
               "EditorCaption": ""
             },
             {
@@ -168,59 +288,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LogIn.cshtml",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Views\\LogIn\\LogIn.cshtml",
-              "RelativeDocumentMoniker": "Views\\LogIn\\LogIn.cshtml",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Views\\LogIn\\LogIn.cshtml",
-              "RelativeToolTip": "Views\\LogIn\\LogIn.cshtml",
-              "ViewState": "AQIAADMAAAAAAAAAAAAAABUAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-02-22T02:27:01.157Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "GruposPorProfesor.cshtml",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Views\\Grupos\\GruposPorProfesor.cshtml",
               "RelativeDocumentMoniker": "Views\\Grupos\\GruposPorProfesor.cshtml",
               "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Views\\Grupos\\GruposPorProfesor.cshtml",
               "RelativeToolTip": "Views\\Grupos\\GruposPorProfesor.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAADQAAAAAAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACQAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-03-13T18:06:49.033Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CursosController.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Controllers\\CursosController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CursosController.cs",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Controllers\\CursosController.cs",
-              "RelativeToolTip": "Controllers\\CursosController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T17:25:02.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DashboardController.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Controllers\\DashboardController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Controllers\\DashboardController.cs",
-              "RelativeToolTip": "Controllers\\DashboardController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAiwB8AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T00:10:37.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "CursoGrupoViewModel.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Models\\ViewModels\\CursoGrupoViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ViewModels\\CursoGrupoViewModel.cs",
@@ -233,20 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GrupoViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Models\\ViewModels\\GrupoViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ViewModels\\GrupoViewModel.cs",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Models\\ViewModels\\GrupoViewModel.cs",
-              "RelativeToolTip": "Models\\ViewModels\\GrupoViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-25T23:55:58.018Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "CuentaViewModel.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Models\\ViewModels\\CuentaViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ViewModels\\CuentaViewModel.cs",
@@ -259,7 +327,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
+              "Title": "AsignacionViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Models\\ViewModels\\AsignacionViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\AsignacionViewModel.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Models\\ViewModels\\AsignacionViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\AsignacionViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-25T23:55:17.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GrupoViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Models\\ViewModels\\GrupoViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\GrupoViewModel.cs",
+              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Models\\ViewModels\\GrupoViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\GrupoViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-25T23:55:58.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "LogInViewModel.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Models\\ViewModels\\LogInViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ViewModels\\LogInViewModel.cs",
@@ -272,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "UsuarioViewModel.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Models\\ViewModels\\UsuarioViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ViewModels\\UsuarioViewModel.cs",
@@ -280,11 +374,12 @@
               "RelativeToolTip": "Models\\ViewModels\\UsuarioViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-25T23:56:22.947Z"
+              "WhenOpened": "2024-02-25T23:56:22.947Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "AsignacionesProximas.cshtml",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Views\\Dashboard\\AsignacionesProximas.cshtml",
               "RelativeDocumentMoniker": "Views\\Dashboard\\AsignacionesProximas.cshtml",
@@ -292,23 +387,12 @@
               "RelativeToolTip": "Views\\Dashboard\\AsignacionesProximas.cshtml",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-02-26T01:09:06.558Z"
+              "WhenOpened": "2024-02-26T01:09:06.558Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AsignacionViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Models\\ViewModels\\AsignacionViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ViewModels\\AsignacionViewModel.cs",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Models\\ViewModels\\AsignacionViewModel.cs",
-              "RelativeToolTip": "Models\\ViewModels\\AsignacionViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-25T23:55:17.729Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "DetalleAsignacion.cshtml",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Views\\Dashboard\\DetalleAsignacion.cshtml",
               "RelativeDocumentMoniker": "Views\\Dashboard\\DetalleAsignacion.cshtml",
@@ -316,24 +400,12 @@
               "RelativeToolTip": "Views\\Dashboard\\DetalleAsignacion.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-02-27T18:41:14.355Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Web.config",
-              "RelativeDocumentMoniker": "Web.config",
-              "ToolTip": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Web.config",
-              "RelativeToolTip": "Web.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEoAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-02-26T00:12:47.25Z",
+              "WhenOpened": "2024-02-27T18:41:14.355Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "DashboardViewModel.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Models\\ViewModels\\DashboardViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ViewModels\\DashboardViewModel.cs",
@@ -341,11 +413,12 @@
               "RelativeToolTip": "Models\\ViewModels\\DashboardViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-25T23:56:59.863Z"
+              "WhenOpened": "2024-02-25T23:56:59.863Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "RouteConfig.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\App_Start\\RouteConfig.cs",
               "RelativeDocumentMoniker": "App_Start\\RouteConfig.cs",
@@ -353,11 +426,12 @@
               "RelativeToolTip": "App_Start\\RouteConfig.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-22T03:12:34.849Z"
+              "WhenOpened": "2024-02-22T03:12:34.849Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "CursoViewModel.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Models\\ViewModels\\CursoViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ViewModels\\CursoViewModel.cs",
@@ -365,11 +439,12 @@
               "RelativeToolTip": "Models\\ViewModels\\CursoViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-25T23:55:43.111Z"
+              "WhenOpened": "2024-02-25T23:55:43.111Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "LogInController.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Controllers\\LogInController.cs",
               "RelativeDocumentMoniker": "Controllers\\LogInController.cs",
@@ -377,11 +452,12 @@
               "RelativeToolTip": "Controllers\\LogInController.cs",
               "ViewState": "AQIAABcAAAAAAAAAAAAAADIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-22T01:31:56.06Z"
+              "WhenOpened": "2024-02-22T01:31:56.06Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "bootstrap-grid.css",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Content\\bootstrap-grid.css",
               "RelativeDocumentMoniker": "Content\\bootstrap-grid.css",
@@ -389,11 +465,12 @@
               "RelativeToolTip": "Content\\bootstrap-grid.css",
               "ViewState": "AQIAAKUAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-02-26T17:18:22.316Z"
+              "WhenOpened": "2024-02-26T17:18:22.316Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "FilterConfig.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\App_Start\\FilterConfig.cs",
               "RelativeDocumentMoniker": "App_Start\\FilterConfig.cs",
@@ -401,11 +478,12 @@
               "RelativeToolTip": "App_Start\\FilterConfig.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T04:15:59.936Z"
+              "WhenOpened": "2024-02-26T04:15:59.936Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "BundleConfig.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\App_Start\\BundleConfig.cs",
               "RelativeDocumentMoniker": "App_Start\\BundleConfig.cs",
@@ -413,11 +491,12 @@
               "RelativeToolTip": "App_Start\\BundleConfig.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T04:44:14.063Z"
+              "WhenOpened": "2024-02-26T04:44:14.063Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -425,11 +504,12 @@
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-02-26T04:23:21.941Z"
+              "WhenOpened": "2024-02-26T04:23:21.941Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Views\\Web.config",
               "RelativeDocumentMoniker": "Views\\Web.config",
@@ -437,11 +517,12 @@
               "RelativeToolTip": "Views\\Web.config",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-02-26T00:26:10.511Z"
+              "WhenOpened": "2024-02-26T00:26:10.511Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "Global.asax.cs",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Global.asax.cs",
               "RelativeDocumentMoniker": "Global.asax.cs",
@@ -449,11 +530,12 @@
               "RelativeToolTip": "Global.asax.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T04:26:17.245Z"
+              "WhenOpened": "2024-02-26T04:26:17.245Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\danie\\OneDrive\\Documentos\\GitHub\\Analisis-Diseno-e-Implementacion-de-Sistemas\\EduGestor\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
@@ -461,7 +543,8 @@
               "RelativeToolTip": "Views\\_ViewStart.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-02-22T02:59:06.219Z"
+              "WhenOpened": "2024-02-22T02:59:06.219Z",
+              "EditorCaption": ""
             }
           ]
         }

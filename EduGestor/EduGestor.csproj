@@ -131,6 +131,7 @@
     <Compile Include="Controllers\CuentaController.cs" />
     <Compile Include="Controllers\CursosController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\GruposController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LogInController.cs" />
     <Compile Include="Global.asax.cs">
@@ -157,6 +158,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EduGestorModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\EstudiantesGrupos.cs">
+      <DependentUpon>EduGestorModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Grupos.cs">
       <DependentUpon>EduGestorModel.tt</DependentUpon>
     </Compile>
@@ -177,6 +181,7 @@
     <Compile Include="Models\ViewModels\CursoGrupoViewModel.cs" />
     <Compile Include="Models\ViewModels\CursoViewModel.cs" />
     <Compile Include="Models\ViewModels\DashboardViewModel.cs" />
+    <Compile Include="Models\ViewModels\GrupoEstudianteViewModel.cs" />
     <Compile Include="Models\ViewModels\GrupoViewModel.cs" />
     <Compile Include="Models\ViewModels\LogInViewModel.cs" />
     <Compile Include="Models\ViewModels\UsuarioViewModel.cs" />
@@ -256,6 +261,7 @@
     <Content Include="Views\Dashboard\AsignacionesProximas.cshtml" />
     <Content Include="Views\Dashboard\DetalleAsignacion.cshtml" />
     <Content Include="Views\Grupos\GruposPorProfesor.cshtml" />
+    <Content Include="Views\Grupos\VistaGrupos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

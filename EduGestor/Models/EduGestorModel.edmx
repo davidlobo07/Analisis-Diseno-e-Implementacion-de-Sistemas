@@ -31,6 +31,7 @@
           </Key>
           <Property Name="EstudianteID" Type="int" Nullable="false" />
           <Property Name="GrupoID" Type="int" Nullable="false" />
+          <Property Name="IdentificadorUnico" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
         <EntityType Name="Grupos">
           <Key>
@@ -39,7 +40,7 @@
           <Property Name="GrupoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NombreGrupo" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="CursoID" Type="int" Nullable="false" />
-          <Property Name="UsuarioID" Type="int" Nullable="false" />
+          <Property Name="UsuarioID" Type="int" />
         </EntityType>
         <EntityType Name="PerfilUsuario">
           <Key>
@@ -175,7 +176,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Grupos_Usuarios">
-          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
           <End Role="Grupos" Type="Self.Grupos" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Usuarios">
@@ -276,6 +277,17 @@
           <NavigationProperty Name="Grupos" Relationship="Self.FK__Grupos__CursoID__4BAC3F29" FromRole="Cursos" ToRole="Grupos" />
           <NavigationProperty Name="ProfesoresCursos" Relationship="Self.fk_curso" FromRole="Cursos" ToRole="ProfesoresCursos" />
         </EntityType>
+        <EntityType Name="EstudiantesGrupos">
+          <Key>
+            <PropertyRef Name="EstudianteID" />
+            <PropertyRef Name="GrupoID" />
+          </Key>
+          <Property Name="EstudianteID" Type="Int32" Nullable="false" />
+          <Property Name="GrupoID" Type="Int32" Nullable="false" />
+          <Property Name="IdentificadorUnico" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK__Estudiant__Estud__4E88ABD4" FromRole="EstudiantesGrupos" ToRole="Usuarios" />
+          <NavigationProperty Name="Grupos" Relationship="Self.FK__Estudiant__Grupo__4F7CD00D" FromRole="EstudiantesGrupos" ToRole="Grupos" />
+        </EntityType>
         <EntityType Name="Grupos">
           <Key>
             <PropertyRef Name="GrupoID" />
@@ -283,10 +295,10 @@
           <Property Name="GrupoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="NombreGrupo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="CursoID" Type="Int32" Nullable="false" />
+          <Property Name="UsuarioID" Type="Int32" />
           <NavigationProperty Name="Curso" Relationship="Self.FK__Grupos__CursoID__4BAC3F29" FromRole="Grupos" ToRole="Cursos" />
-          <NavigationProperty Name="Usuarios" Relationship="Self.EstudiantesGrupos" FromRole="Grupos" ToRole="Usuarios" />
-          <Property Name="UsuarioID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Usuario" Relationship="EduGestorModel.FK_Grupos_Usuarios" FromRole="Grupos" ToRole="Usuario" />
+          <NavigationProperty Name="EstudiantesGrupos" Relationship="Self.FK__Estudiant__Grupo__4F7CD00D" FromRole="Grupos" ToRole="EstudiantesGrupos" />
+          <NavigationProperty Name="Usuario" Relationship="Self.FK_Grupos_Usuarios" FromRole="Grupos" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="PerfilUsuario">
           <Key>
@@ -329,11 +341,11 @@
           <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="RolID" Type="Int32" />
           <NavigationProperty Name="Asignaciones" Relationship="Self.FK__Asignacio__Usuar__48CFD27E" FromRole="Usuarios" ToRole="Asignaciones" />
+          <NavigationProperty Name="EstudiantesGrupos" Relationship="Self.FK__Estudiant__Estud__4E88ABD4" FromRole="Usuarios" ToRole="EstudiantesGrupos" />
+          <NavigationProperty Name="Grupos" Relationship="Self.FK_Grupos_Usuarios" FromRole="Usuarios" ToRole="Grupos" />
           <NavigationProperty Name="PerfilUsuarios" Relationship="Self.FK__PerfilUsu__Usuar__3E52440B" FromRole="Usuarios" ToRole="PerfilUsuario" />
           <NavigationProperty Name="ProfesoresCursos" Relationship="Self.fk_usuario" FromRole="Usuarios" ToRole="ProfesoresCursos" />
           <NavigationProperty Name="Role" Relationship="Self.FK__Usuarios__RolID__3A81B327" FromRole="Usuarios" ToRole="Roles" />
-          <NavigationProperty Name="Grupos" Relationship="Self.EstudiantesGrupos" FromRole="Usuarios" ToRole="Grupos" />
-          <NavigationProperty Name="Grupos1" Relationship="EduGestorModel.FK_Grupos_Usuarios" FromRole="Usuario" ToRole="Grupos" />
         </EntityType>
         <Association Name="FK__Asignacio__Curso__47DBAE45">
           <End Role="Cursos" Type="Self.Curso" Multiplicity="1" />
@@ -383,6 +395,42 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Estudiant__Estud__4E88ABD4">
+          <End Role="Usuarios" Type="Self.Usuario" Multiplicity="1" />
+          <End Role="EstudiantesGrupos" Type="Self.EstudiantesGrupos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="UsuarioID" />
+            </Principal>
+            <Dependent Role="EstudiantesGrupos">
+              <PropertyRef Name="EstudianteID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Estudiant__Grupo__4F7CD00D">
+          <End Role="Grupos" Type="Self.Grupos" Multiplicity="1" />
+          <End Role="EstudiantesGrupos" Type="Self.EstudiantesGrupos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grupos">
+              <PropertyRef Name="GrupoID" />
+            </Principal>
+            <Dependent Role="EstudiantesGrupos">
+              <PropertyRef Name="GrupoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Grupos_Usuarios">
+          <End Role="Usuarios" Type="Self.Usuario" Multiplicity="0..1" />
+          <End Role="Grupos" Type="Self.Grupos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="UsuarioID" />
+            </Principal>
+            <Dependent Role="Grupos">
+              <PropertyRef Name="UsuarioID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__PerfilUsu__Usuar__3E52440B">
           <End Role="Usuarios" Type="Self.Usuario" Multiplicity="0..1" />
           <End Role="PerfilUsuario" Type="Self.PerfilUsuario" Multiplicity="*" />
@@ -419,13 +467,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="EstudiantesGrupos">
-          <End Role="Usuarios" Type="Self.Usuario" Multiplicity="*" />
-          <End Role="Grupos" Type="Self.Grupos" Multiplicity="*" />
-        </Association>
         <EntityContainer Name="EduGestorEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Asignaciones" EntityType="Self.Asignacione" />
           <EntitySet Name="Cursos" EntityType="Self.Curso" />
+          <EntitySet Name="EstudiantesGrupos" EntityType="Self.EstudiantesGrupos" />
           <EntitySet Name="Grupos" EntityType="Self.Grupos" />
           <EntitySet Name="PerfilUsuarios" EntityType="Self.PerfilUsuario" />
           <EntitySet Name="ProfesoresCursos" EntityType="Self.ProfesoresCurso" />
@@ -447,6 +492,18 @@
             <End Role="Cursos" EntitySet="Cursos" />
             <End Role="ProfesoresCursos" EntitySet="ProfesoresCursos" />
           </AssociationSet>
+          <AssociationSet Name="FK__Estudiant__Estud__4E88ABD4" Association="Self.FK__Estudiant__Estud__4E88ABD4">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="EstudiantesGrupos" EntitySet="EstudiantesGrupos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Estudiant__Grupo__4F7CD00D" Association="Self.FK__Estudiant__Grupo__4F7CD00D">
+            <End Role="Grupos" EntitySet="Grupos" />
+            <End Role="EstudiantesGrupos" EntitySet="EstudiantesGrupos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Grupos_Usuarios" Association="Self.FK_Grupos_Usuarios">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Grupos" EntitySet="Grupos" />
+          </AssociationSet>
           <AssociationSet Name="FK__PerfilUsu__Usuar__3E52440B" Association="Self.FK__PerfilUsu__Usuar__3E52440B">
             <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="PerfilUsuario" EntitySet="PerfilUsuarios" />
@@ -459,27 +516,7 @@
             <End Role="Roles" EntitySet="Roles" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
-          <AssociationSet Name="EstudiantesGrupos" Association="Self.EstudiantesGrupos">
-            <End Role="Usuarios" EntitySet="Usuarios" />
-            <End Role="Grupos" EntitySet="Grupos" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Grupos_Usuarios" Association="EduGestorModel.FK_Grupos_Usuarios">
-            <End Role="Usuario" EntitySet="Usuarios" />
-            <End Role="Grupos" EntitySet="Grupos" />
-          </AssociationSet>
         </EntityContainer>
-        <Association Name="FK_Grupos_Usuarios">
-          <End Type="EduGestorModel.Usuario" Role="Usuario" Multiplicity="1" />
-          <End Type="EduGestorModel.Grupos" Role="Grupos" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Usuario">
-              <PropertyRef Name="UsuarioID" />
-            </Principal>
-            <Dependent Role="Grupos">
-              <PropertyRef Name="UsuarioID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -507,13 +544,22 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="EstudiantesGrupos">
+            <EntityTypeMapping TypeName="EduGestorModel.EstudiantesGrupos">
+              <MappingFragment StoreEntitySet="EstudiantesGrupos">
+                <ScalarProperty Name="EstudianteID" ColumnName="EstudianteID" />
+                <ScalarProperty Name="GrupoID" ColumnName="GrupoID" />
+                <ScalarProperty Name="IdentificadorUnico" ColumnName="IdentificadorUnico" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Grupos">
             <EntityTypeMapping TypeName="EduGestorModel.Grupos">
               <MappingFragment StoreEntitySet="Grupos">
-                <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
                 <ScalarProperty Name="GrupoID" ColumnName="GrupoID" />
                 <ScalarProperty Name="NombreGrupo" ColumnName="NombreGrupo" />
                 <ScalarProperty Name="CursoID" ColumnName="CursoID" />
+                <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -558,14 +604,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="EstudiantesGrupos" TypeName="EduGestorModel.EstudiantesGrupos" StoreEntitySet="EstudiantesGrupos">
-            <EndProperty Name="Usuarios">
-              <ScalarProperty Name="UsuarioID" ColumnName="EstudianteID" />
-            </EndProperty>
-            <EndProperty Name="Grupos">
-              <ScalarProperty Name="GrupoID" ColumnName="GrupoID" />
-            </EndProperty>
-          </AssociationSetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

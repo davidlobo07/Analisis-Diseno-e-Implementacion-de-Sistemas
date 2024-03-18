@@ -27,6 +27,7 @@ namespace EduGestor.Models
     
         public virtual DbSet<Asignacione> Asignaciones { get; set; }
         public virtual DbSet<Curso> Cursos { get; set; }
+        public virtual DbSet<EstudiantesGrupos> EstudiantesGrupos { get; set; }
         public virtual DbSet<Grupos> Grupos { get; set; }
         public virtual DbSet<PerfilUsuario> PerfilUsuarios { get; set; }
         public virtual DbSet<ProfesoresCurso> ProfesoresCursos { get; set; }
